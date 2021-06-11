@@ -7,6 +7,7 @@ namespace AddressBookLinq
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book linq problem!");
+            AddressBook management = new AddressBook();
         }
     }
 }
