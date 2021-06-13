@@ -10,8 +10,8 @@ namespace AddressBookLinq
     {
         public DataTable AddressBookDataTable()
         {
-            DataTable table = new DataTable(); 
-            
+            DataTable table = new DataTable();
+
             table.Columns.Add("FirstName", typeof(string));
             table.Columns.Add("LastName", typeof(string));
             table.Columns.Add("Address", typeof(string));
@@ -54,8 +54,19 @@ namespace AddressBookLinq
                 contact.SetField("State", "Maharashtra");
             }
 
-            Console.WriteLine("The Contact is updated succesfully\n");
+            Console.WriteLine("The Contact is updated succesfully!\n");
             GetAllContacts(contacts.CopyToDataTable());
+        }
+
+        public void DeleteContact(DataTable table)
+        {
+            var contacts = table.AsEnumerable().Where(x => x.Field<string>("FirstName") == "Charan");
+            foreach (var row in contacts.ToList())
+            {
+                row.Delete();
+            }
+            Console.WriteLine("The Contact is deleted succesfully!\n");
+            GetAllContacts(table);
         }
     }
 }
