@@ -13,7 +13,8 @@ namespace AddressBookLinq
             //addressBook.GetAllContacts(dataTable);
             //addressBook.EditContact(dataTable);
             //addressBook.DeleteContact(dataTable);
-            addressBook.RetrieveContactByState(dataTable);
+            //addressBook.RetrieveContactByState(dataTable);
+            addressBook.GetSizeByCity(dataTable);
             Console.ReadLine();
         }
     }

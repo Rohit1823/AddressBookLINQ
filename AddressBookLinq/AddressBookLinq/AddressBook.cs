@@ -78,5 +78,11 @@ namespace AddressBookLinq
                 Console.WriteLine("\n");
             }
         }
+        public void GetSizeByCity(DataTable table)
+        {
+            var contacts = table.Rows.Cast<DataRow>()
+                             .GroupBy(x => x["City"].Equals("Pune")).Count();
+            Console.WriteLine(" : {0} ", contacts);
+        }
     }
 }
