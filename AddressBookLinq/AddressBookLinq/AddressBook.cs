@@ -20,11 +20,14 @@ namespace AddressBookLinq
             table.Columns.Add("Zip", typeof(string));
             table.Columns.Add("PhoneNumber", typeof(string));
             table.Columns.Add("Email", typeof(string));
+            table.Columns.Add("AddressBookType", typeof(string));
+            table.Columns.Add("AddressBookName", typeof(string));
 
-            table.Rows.Add("Rohit", "Machale", "South palace", "Pune", "Maharashtra", "535501", "8975596720", "rohit@gmail.com");
-            table.Rows.Add("Shivam", "Satpute", "KP", "Nagpur", "Maharashtra", "546489", "8570456737", "shivam@gmail.com");
-            table.Rows.Add("Jyosmita", "Das", "New colony", "Surat", "Gujrat", "546362", "9878678593", "jyodas@gmail.com");
-            table.Rows.Add("Charan", "Ketha", "WhiteField", "Banglore", "Karnataka", "125445", "7206326427", "charan@gmail.com");
+
+            table.Rows.Add("Rohit", "Machale", "South palace", "Pune", "Maharashtra", "535501", "8975596720", "rohit@gmail.com", "Family", "Book1");
+            table.Rows.Add("Shivam", "Satpute", "KP", "Nagpur", "Maharashtra", "546489", "8570456737", "shivam@gmail.com", "Friends", "Book4");
+            table.Rows.Add("Jyosmita", "Das", "New colony", "Surat", "Gujrat", "546362", "9878678593", "jyodas@gmail.com", "Profession", "Book2");
+            table.Rows.Add("Charan", "Ketha", "WhiteField", "Banglore", "Karnataka", "125445", "7206326427", "charan@gmail.com", "Friends", "Book3");
             return table;
         }
 
@@ -34,13 +37,15 @@ namespace AddressBookLinq
             {
                 Console.WriteLine("\n");
                 Console.WriteLine("FirstName:- " + dr.Field<string>("FirstName"));
-                Console.WriteLine("lastName:- " + dr.Field<string>("LastName"));
+                Console.WriteLine("LastName:- " + dr.Field<string>("LastName"));
                 Console.WriteLine("Address:- " + dr.Field<string>("Address"));
                 Console.WriteLine("City:- " + dr.Field<string>("City"));
                 Console.WriteLine("State:- " + dr.Field<string>("State"));
-                Console.WriteLine("zip:- " + dr.Field<string>("Zip"));
-                Console.WriteLine("phoneNumber:- " + dr.Field<string>("phoneNumber"));
-                Console.WriteLine("eMail:- " + dr.Field<string>("Email"));
+                Console.WriteLine("Zip:- " + dr.Field<string>("Zip"));
+                Console.WriteLine("PhoneNumber:- " + dr.Field<string>("PhoneNumber"));
+                Console.WriteLine("Email:- " + dr.Field<string>("Email"));
+                Console.WriteLine("AddressBookType:- " + dr.Field<string>("AddressBookType"));
+                Console.WriteLine("AddressBookName:- " + dr.Field<string>("AddressBookName"));
             }
 
         }

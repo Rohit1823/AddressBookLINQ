@@ -10,7 +10,7 @@ namespace AddressBookLinq
             Console.WriteLine("Welcome to Address book linq problem!");
             AddressBook addressBook = new AddressBook();
             DataTable dataTable = addressBook.AddressBookDataTable();
-            //addressBook.GetAllContacts(dataTable);
+            addressBook.GetAllContacts(dataTable);
             //addressBook.EditContact(dataTable);
             //addressBook.DeleteContact(dataTable);
             //addressBook.RetrieveContactByState(dataTable);
